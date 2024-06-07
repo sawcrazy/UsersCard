@@ -1,0 +1,10 @@
+.main{
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%;
+}
+.main__userCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

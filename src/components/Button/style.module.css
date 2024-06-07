@@ -1,19 +1,121 @@
+body {
+
+    padding: 15px 0;
+
+}
+
 .button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #fff;
+
+    text-decoration: none;
+
+    color: #6b5770;
+
+    background-image: linear-gradient(90deg, #fd7f34, #bd155b);
+
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    border: 1px solid;
+
+    position: relative;
+
+    z-index: 0;
+
+    border-radius: 5px;
+
+    box-sizing: border-box;
+
+    margin: 0 15px 15px 0;
+
+    outline: none;
+
     cursor: pointer;
-    transition: border-color 0.25s;
-    color: #000;
+
+    user-select: none;
+
+    appearance: none;
+
+    touch-action: manipulation;
+
 }
+
+.button:before {
+
+    content: '';
+
+    position: absolute;
+
+    left: -2px;
+
+    top: -2px;
+
+    width: calc(100% + 4px);
+
+    height: calc(100% + 4px);
+
+    background: linear-gradient(90deg, #fd7f34, #bd155b);
+
+    z-index: -2;
+
+    transition: .4s;
+
+    border-radius: 5px;
+
+}
+
+.button:after {
+
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: linear-gradient(90deg, #fff, #fff);
+
+    z-index: -1;
+
+    transition: .4s;
+
+    border-radius: 4px;
+
+}
+
 .button:hover {
-    border-color: #646cff;
+
+    color: #fff;
+
+    transition: .3s;
+
 }
-.button:focus,
+
+.button:hover:after {
+
+    background: linear-gradient(90deg, #fd7f34, #bd155b);
+
+}
+
+.button:active:after {
+
+    background: linear-gradient(90deg, #d96d2d, #760f3a);
+
+}
+
 .button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+
+    box-shadow: 0 0 0 3px #fd7f34;
+
+}
+
+.button:disabled {
+
+    pointer-events: none;
+
 }
