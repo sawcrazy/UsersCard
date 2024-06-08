@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Button} from "./components/Button/Button";
 import {Card} from "./components/Card/Card";
 import {IUser} from "./common/types/user";
-import './App.css'
+import s from "./style.module.css";
 
 export const App = () => {
   const [users , setUsers] = useState<IUser[]>([]);
@@ -24,13 +24,13 @@ export const App = () => {
     return users.slice(page*5,(page+1)*5)
       .map((item) =>{
         return (
-          <Card key={item.id} user={item} delUser={delUser}/>
+          <Card key={item.id} user={item} deleteUser={deleteUser}/>
         )
       })
   }
-  const delUser = (id) =>{
-    const deleteUser = users.filter((item) => item.id !== id);
-    setUsers(deleteUser);
+  const deleteUser = (id) =>{
+    const newUser = users.filter((item) => item.id !== id);
+    setUsers(newUser);
   }
   const next = () =>{
     setPage(prev => prev + 1);
@@ -39,11 +39,11 @@ export const App = () => {
     setPage(prev => prev - 1);
   }
   return (
-    <div className='main'>
-      <div className="main__userCard">
+    <div className={s.main}>
+      <div className={s.userCard}>
         {renderUsers()}
       </div>
-      <div className="footer__button">
+      <div>
         {page !== 0 && (
           <Button onClick={back}>
             back

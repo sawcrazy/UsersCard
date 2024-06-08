@@ -5,9 +5,10 @@ import {Button} from "../Button/Button";
 
 interface ICard {
   user: IUser;
+  deleteUser(id: string): void
 }
 
-export const Card: FC<ICard> = ({user,delUser}) => {
+export const Card: FC<ICard> = ({user,deleteUser}) => {
   return (
     <div className={s.list}>
       <dl className={s.holiday}>
@@ -40,7 +41,7 @@ export const Card: FC<ICard> = ({user,delUser}) => {
         <dt>BS</dt>
         <dd>{user.company.bs}</dd>
       </dl>
-        <Button onClick={()=>delUser(user.id)}>
+        <Button onClick={()=>deleteUser(user.id)}>
           удалить
           </Button>
     </div>
