@@ -1,5 +1,10 @@
 .list {
-    width: 450px;
+    margin: 10px;
+    padding: 10px;
+    width: 500px;
+    border: 1px solid #d96d2d;
+    border-radius: 30px;
+
 }
 .holiday {
     overflow: hidden;
@@ -10,6 +15,7 @@
     line-height: 2.5em;
     padding: 0 0.625em 0 0.875em;
     color: #4C565C;
+    border-radius: 10px;
     box-sizing: border-box;
 }
 dt {
