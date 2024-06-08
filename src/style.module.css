@@ -8,3 +8,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.no_data{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}

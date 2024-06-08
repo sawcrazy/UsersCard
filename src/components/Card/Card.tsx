@@ -5,7 +5,7 @@ import {Button} from "../Button/Button";
 
 interface ICard {
   user: IUser;
-  deleteUser(id: string): void
+  deleteUser(id: string): void;
 }
 
 export const Card: FC<ICard> = ({user,deleteUser}) => {

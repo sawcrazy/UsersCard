@@ -38,6 +38,13 @@ export const App = () => {
   const back = () =>{
     setPage(prev => prev - 1);
   }
+  if(users.length === 0) {
+    return (
+      <div className={s.no_data}>
+        Нет данных
+      </div>
+    )
+  }
   return (
     <div className={s.main}>
       <div className={s.userCard}>
