@@ -1,7 +1,7 @@
-import React, {FC} from "react";
+import React, {FC} from 'react';
 import s from './style.module.css';
-import {IUser} from "../../common/types/user";
-import {Button} from "../Button/Button";
+import {IUser} from '../../common/types/user';
+import {Button} from '../Button/Button';
 
 interface ICard {
   user: IUser;

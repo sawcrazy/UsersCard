@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react";
-import {Button} from "./components/Button/Button";
-import {Card} from "./components/Card/Card";
-import {IUser} from "./common/types/user";
-import s from "./style.module.css";
+import React, {useEffect, useState} from 'react';
+import {Button} from './components/Button/Button';
+import {Card} from './components/Card/Card';
+import {IUser} from './common/types/user';
+import s from './style.module.css';
 
 export const App = () => {
   const [users , setUsers] = useState<IUser[]>([]);
